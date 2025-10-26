@@ -1,3 +1,88 @@
+body {
+    margin: 40px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
 .parent {
     display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#errorMinCol,
+#errorMinRow {
+    color: #c00;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Table setup */
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: max-content;
+    min-width: 100%;
+}
+
+th, td {
+    width: 80px;
+    padding: 6px 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+th {
+    background-color: #194676;
+    color: white;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Scrollable container */
+.table-container {
+    overflow: auto;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+/* Source for positioning: https://www.w3schools.com/css/css_positioning.asp */
+/* Sticky header cells */
+.header-cell {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Sticky first column cells */
+.vertical-header-cell {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+}
+
+/* Top-left corner (intersection) */
+.topLeft {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 4;
 }
