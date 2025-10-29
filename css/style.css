@@ -1,3 +1,4 @@
+/* Page layout and base styles */
 body {
     margin: 40px;
     padding: 20px;
@@ -5,16 +6,19 @@ body {
     background-color: #fafafa;
 }
 
+/* Two-column responsive layout */
 .parent {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
 
+/* Label styles */
 label {
     font-weight: 500;
 }
 
+/* Numeric input appearance */
 input[type="number"] {
     width: 100%;
     padding: 6px 8px;
@@ -23,14 +27,17 @@ input[type="number"] {
     border-radius: 4px;
 }
 
+/* Validation messages */
 #errorMinCol,
-#errorMinRow {
+#errorMinRow,
+#errorMaxCol,
+#errorMaxRow {
     color: #c00;
     font-size: 13px;
     margin-top: 4px;
 }
 
-/* Table setup */
+/* Table sizing and layout */
 table {
     border-collapse: collapse;
     table-layout: fixed;
@@ -38,6 +45,7 @@ table {
     min-width: 100%;
 }
 
+/* Shared cell styles */
 th, td {
     width: 80px;
     padding: 6px 10px;
@@ -47,39 +55,40 @@ th, td {
     overflow: hidden;
 }
 
+/* Header appearance */
 th {
     background-color: #194676;
     color: white;
     font-weight: 500;
 }
 
+/* Even row background color */
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Scrollable container */
+/* Scrollable table viewport */
 .table-container {
     overflow: auto;
     max-height: 400px;
     max-width: 100%;
 }
 
-/* Source for positioning: https://www.w3schools.com/css/css_positioning.asp */
-/* Sticky header cells */
+/* Sticky header cells (position reference: https://www.w3schools.com/css/css_positioning.asp) */
 .header-cell {
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-/* Sticky first column cells */
+/* Sticky first column */
 .vertical-header-cell {
     position: sticky;
     left: 0;
     z-index: 3;
 }
 
-/* Top-left corner (intersection) */
+/* Sticky corner: top-left intersection */
 .topLeft {
     position: sticky;
     top: 0;
